@@ -1,4 +1,6 @@
+dist
 node_modules
-Scripts/*.js
-Scripts/*.js.map
+Scripts/**/*.js
+Scripts/**/*.js.map
+
 

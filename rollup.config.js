@@ -9,7 +9,7 @@ const includePathOptions = {
 export default {
 	input: "main.js",
 	output: {
-		file: "index.js",
+		file: "dist/index.js",
 		format: "iife",
 	},
 	plugins: [
