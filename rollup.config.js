@@ -1,10 +1,4 @@
-//import includePaths from 'rollup-plugin-includepaths';
 import nodeResolve from "@rollup/plugin-node-resolve";
-
-const includePathOptions = {
-	extensions: [".js"],
-	paths: ["node_modules", "Scripts"]
-};
 
 export default {
 	input: "main.js",
@@ -13,12 +7,10 @@ export default {
 		format: "iife",
 	},
 	plugins: [
-		//includePaths(includePathOptions),
 		nodeResolve({
 			"extensions": [".js"],
 			"moduleDirectories": ["node_modules", "Scripts"],
-			"modulesOnly": true
+			"modulesOnly": false//should be true, but Lit 3.0 pre-release breaks it. Try again later
 		})
 	],
 };
-

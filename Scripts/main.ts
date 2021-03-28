@@ -3,4 +3,3 @@ import { MyComponent2 } from "Native/c-two.js"
 
 customElements.define("c-one", MyComponent)
 customElements.define("c-two", MyComponent2)
-

@@ -12,4 +12,3 @@ export class MyComponent extends LitElement {
 		`
 	}
 }
-
