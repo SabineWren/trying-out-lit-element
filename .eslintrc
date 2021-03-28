@@ -3,7 +3,6 @@
 	/* See all the pre-defined configs here: https://www.npmjs.com/package/eslint-config-defaults */
 	"extends": [
 		"eslint:recommended",
-		"plugin:@typescript-eslint/recommended",
 	],
 	"env": {
 		"amd": false,
@@ -38,8 +37,7 @@
 		],
 		"no-undef": 0,//doesn"t work with const enums, and ts compiler can do this instead
 		"no-unexpected-multiline": 0,
-		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
-		//"no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+		"no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
 		"semi": ["error", "never"],
 		"semi-spacing": 1,
 		"spaced-comment": ["error", "never"],
