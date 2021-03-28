@@ -1,3 +1,6 @@
+#safe to ignore because not a production app
+package-lock.json
+
 dist
 node_modules
 Scripts/**/*.js
