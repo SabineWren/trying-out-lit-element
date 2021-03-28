@@ -1,0 +1,47 @@
+//0: off, 1: warn, 2: error
+{
+	/* See all the pre-defined configs here: https://www.npmjs.com/package/eslint-config-defaults */
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+	],
+	"env": {
+		"amd": false,
+		"browser": true,
+    "es6": true,
+		"jquery": false,
+		"node": false,
+		"worker": true },
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": { "sourceType": "module" },
+	"plugins": ["@typescript-eslint", "import"],
+	"rules": {
+		"eqeqeq": 2,
+		"comma-dangle": ["warn", "always-multiline"],
+//disabled because it doesn"t work with lambdas returning objects, i.e. => \n ({ })
+		"indent": ["off", "tab", {
+	"ignoreComments": true,
+	//"offsetTernaryExpressions": true,
+	//"flatTernaryExpressions": true,
+	//"FunctionExpression": { "body": 1, "parameters": 1 },
+		}],
+		"no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
+		"no-console": ["error", { "allow": ["warn", "error"] }],
+		"no-debugger": 1,
+		"no-extra-semi": 1,
+		"no-extra-parens": 0,
+		"no-irregular-whitespace": 0,
+		"no-restricted-globals": [
+        "error",
+				{ "name": "name", "message": "You probably don't mean window.name. Undeclared variable?" },
+		],
+		"no-undef": 0,//doesn"t work with const enums, and ts compiler can do this instead
+		"no-unexpected-multiline": 0,
+		"no-unused-vars": 0,
+		"semi": ["error", "never"],
+		"semi-spacing": 1,
+		"spaced-comment": ["error", "never"],
+		"valid-jsdoc": [2, { "requireReturn": false }],
+		"import/extensions": ["warn", { "js": "always" }],
+	}
+}

@@ -5,6 +5,9 @@
 * Rollup/Webpack without a plugin
 * Correctly shares application libraries/state without duplication
 
+### Bad
+* Idomatic Lit css incompatible with non-Lit elements (Can still inline style tag for shared css)
+
 ### To Evaluate
 * Markup for templating tables
 * Update element with "loading state" when pub/sub subscription fires
