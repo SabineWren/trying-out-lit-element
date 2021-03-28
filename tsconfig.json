@@ -23,7 +23,7 @@
 		"target": "esnext",
 		"typeRoots": ["Types/**"],
 	},
-	"include": ["Scripts/**/*"],
+	"include": ["Scripts/**/*", "rollup.config.ts"],
 	"exclude": ["node_modules"],
 	"atom": { "rewriteTsconfig": false }
 }

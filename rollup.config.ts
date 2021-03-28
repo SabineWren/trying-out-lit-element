@@ -10,7 +10,8 @@ export default {
 		nodeResolve({
 			"extensions": [".js"],
 			"moduleDirectories": ["node_modules", "Scripts"],
-			"modulesOnly": false//should be true, but Lit 3.0 pre-release breaks it. Try again later
+			//should be true, but Lit 3.0 pre-release breaks it. Try again later
+			"modulesOnly": false
 		})
 	],
 };
