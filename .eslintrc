@@ -16,6 +16,7 @@
 	"parserOptions": { "sourceType": "module" },
 	"plugins": ["@typescript-eslint", "import"],
 	"rules": {
+		"@typescript-eslint/explicit-module-boundary-types": "off",
 		"eqeqeq": 2,
 		"comma-dangle": ["warn", "always-multiline"],
 //disabled because it doesn"t work with lambdas returning objects, i.e. => \n ({ })
@@ -37,7 +38,8 @@
 		],
 		"no-undef": 0,//doesn"t work with const enums, and ts compiler can do this instead
 		"no-unexpected-multiline": 0,
-		"no-unused-vars": 0,
+		"@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+		//"no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
 		"semi": ["error", "never"],
 		"semi-spacing": 1,
 		"spaced-comment": ["error", "never"],
