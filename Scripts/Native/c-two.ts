@@ -30,5 +30,6 @@ td { padding: 1px; }
 		${r.Cells.map(c => `<td>${c}</td>`).join("")}
 	</tr>`).join("")}
 </table>`
+	console.log("native updated")
 	}
 }

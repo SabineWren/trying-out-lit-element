@@ -14,6 +14,9 @@ export class MyComponent extends LitElement {
 	private setView() {
 		this.rows = makeRows().map(ToViewMoney)
 		this.requestUpdate()
+		this.updateComplete.then(function(r) {
+			console.log("lit updated", r)
+		})
 	}
 	render() {
 		return html `
